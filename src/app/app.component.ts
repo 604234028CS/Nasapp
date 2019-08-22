@@ -1,3 +1,4 @@
+import { JsonPage } from './../pages/json/json';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -28,7 +29,8 @@ export class MyApp {
       { title: 'List', component: ListPage, icon: 'send' },
       { title: 'Login', component: LoginPage, icon: 'contact' },
       { title: 'Scanner', component: ScannerPage, icon: 'send' },
-      { title: 'Flashlight', component: FlashlightPage, icon: 'walk' }
+      { title: 'Flashlight', component: FlashlightPage, icon: 'flash' },
+      { title: 'JsonMenu', component: JsonPage, icon: 'hand' }
     ];
 
   }

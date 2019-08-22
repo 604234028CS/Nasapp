@@ -1,3 +1,4 @@
+import { JsonPage } from './../pages/json/json';
 import { FlashlightPage } from './../pages/flashlight/flashlight';
 import { ScannerPage } from './../pages/scanner/scanner';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,7 +20,7 @@ import { Flashlight } from '@ionic-native/flashlight';
     MyApp,
     HomePage,
     ListPage,LoginPage,
-    ScannerPage,FlashlightPage,
+    ScannerPage,FlashlightPage,JsonPage,
   ],
   imports: [
     BrowserModule,
@@ -30,11 +31,11 @@ import { Flashlight } from '@ionic-native/flashlight';
     MyApp,
     HomePage,
     ListPage,LoginPage,
-    ScannerPage,FlashlightPage,
+    ScannerPage,FlashlightPage,JsonPage,
   ],
   providers: [
     StatusBar,
-    SplashScreen,SMS,BarcodeScanner,Flashlight,
+    SplashScreen,SMS,BarcodeScanner,Flashlight,JsonPage,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
