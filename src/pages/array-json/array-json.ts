@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {HttpClient} from '@angular/common/http';
 
 /**
  * Generated class for the ArrayJsonPage page.
@@ -15,11 +16,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ArrayJsonPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  gameArray = [];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,public http: HttpClient) {
+    this.loadGameData();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ArrayJsonPage');
+  }
+  loadGameData(){
+    let url = 'http://localhost/shop/getAllGames_7.php';
+
+    this.http.get(url).subscribe(
+      (data: any) => {
+        console.log(data);
+        this.gameArray = data.games;
+      }
+      ,(error) => {
+        console.log(error);
+      }
+    );
   }
 
 }

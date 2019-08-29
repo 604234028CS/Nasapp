@@ -1,3 +1,5 @@
+import {HttpClientModule} from '@angular/common/http';
+
 import { JsonPage } from './../pages/json/json';
 import { FlashlightPage } from './../pages/flashlight/flashlight';
 import { ScannerPage } from './../pages/scanner/scanner';
@@ -15,6 +17,9 @@ import { LoginPage } from '../pages/login/login';
 import { SMS } from '@ionic-native/sms/ngx';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Flashlight } from '@ionic-native/flashlight';
+
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -24,6 +29,7 @@ import { Flashlight } from '@ionic-native/flashlight';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
