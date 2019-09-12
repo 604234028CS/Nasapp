@@ -1,3 +1,5 @@
+
+import { MovieAppPage } from './../pages/movie-app/movie-app';
 import {HttpClientModule} from '@angular/common/http';
 
 import { JsonPage } from './../pages/json/json';
@@ -25,7 +27,7 @@ import { Flashlight } from '@ionic-native/flashlight';
     MyApp,
     HomePage,
     ListPage,LoginPage,
-    ScannerPage,FlashlightPage,JsonPage,
+    ScannerPage,FlashlightPage,JsonPage,MovieAppPage,
   ],
   imports: [
     BrowserModule,
@@ -37,11 +39,11 @@ import { Flashlight } from '@ionic-native/flashlight';
     MyApp,
     HomePage,
     ListPage,LoginPage,
-    ScannerPage,FlashlightPage,JsonPage,
+    ScannerPage,FlashlightPage,JsonPage,MovieAppPage,
   ],
   providers: [
     StatusBar,
-    SplashScreen,SMS,BarcodeScanner,Flashlight,JsonPage,
+    SplashScreen,SMS,BarcodeScanner,Flashlight,JsonPage,MovieAppPage,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
