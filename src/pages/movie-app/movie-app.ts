@@ -15,11 +15,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MovieAppPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams ) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MovieAppPage');
+    console.log('ionViewDidLoad MoviesPage');
+  }
+
+  goToNow(){
+    this.navCtrl.push("NowPage");
+  }
+
+  goTOUpcoming(){
+    this.navCtrl.push("UpcomingPage")
+  }
+
+  goToPopular(){
+    this.navCtrl.push("PopularPage")
+  }
+
+  gotoTop(){
+    this.navCtrl.push("TopPage")
   }
 
 }

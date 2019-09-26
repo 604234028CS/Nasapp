@@ -16,47 +16,54 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card color=dark>
-    <ion-card-header>
-      All About Movie
-    </ion-card-header>
-  </ion-card>
-  
-    <ion-item block (click)="Now()">
-      <ion-thumbnail item-left>
-        <img src="assets/imgs/movie1.png">
-      </ion-thumbnail>
-      <h2>Now</h2>
-      <p>Now Playing</p>
-      <ion-icon item-right name="arrow-dropright-circle"></ion-icon>
-    </ion-item>
-  
-      <ion-item block (click)="Upcoming()">
-        <ion-thumbnail item-left>
-          <img src="assets/imgs/movie3.png">
-        </ion-thumbnail>
-        <h2>Upcoming</h2>
-        <p>Upcoming Movie</p>
-        <ion-icon item-right name="arrow-dropright-circle"></ion-icon>
-      </ion-item>
+    <ion-card color=dark>
+        <ion-card-header>
+          All About Movies
+        </ion-card-header>
+      </ion-card>
     
-        <ion-item block (click)="Popular()">
+      <ion-list>
+        <ion-item (click)=goToNow()>
+          <ion-thumbnail item-left>
+            <img src="assets/imgs/movie1.png">
+          </ion-thumbnail>
+          <h2>Now</h2>
+          <p>Now Playing</p>
+          <ion-icon item-right name="arrow-dropright-circle"></ion-icon>
+        </ion-item>
+    
+        <ion-item color=light (click)=goTOUpcoming()>
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/movie3.png">
+          </ion-thumbnail>
+          <h2>Upcoming</h2>
+          <p>Upcoming</p>
+    
+          <ion-icon item-right name="arrow-dropright-circle"></ion-icon>
+    
+        </ion-item>
+    
+        <ion-item (click)=goToPopular()>
           <ion-thumbnail item-left>
             <img src="assets/imgs/movie2.png">
           </ion-thumbnail>
           <h2>Popular</h2>
-          <p>Popular Movie</p>
+          <p>Popular</p>
           <ion-icon item-right name="arrow-dropright-circle"></ion-icon>
         </ion-item>
-      
-          <ion-item block (click)="TopRated()">
-            <ion-thumbnail item-left>
-              <img src="assets/imgs/movie1.jpg">
-            </ion-thumbnail>
-            <h2>Top Rated</h2>
-            <p>Top Rated Movie</p>
-            <ion-icon item-right name="arrow-dropright-circle"></ion-icon>
-          </ion-item>
-        
+    
+        <ion-item color=light (click)=gotoTop()>
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/movie1.jpg">
+          </ion-thumbnail>
+          <h2>Top</h2>
+          <p>Top Rated</p>
+          <ion-icon item-right name="arrow-dropright-circle"></ion-icon>
+        </ion-item>
+    
+      </ion-list>
+    
+    
+  
 
 </ion-content>

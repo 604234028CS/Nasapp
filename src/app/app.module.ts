@@ -19,6 +19,7 @@ import { LoginPage } from '../pages/login/login';
 import { SMS } from '@ionic-native/sms/ngx';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Flashlight } from '@ionic-native/flashlight';
+import { MoviesProvider } from '../providers/movies/movies';
 
 
 
@@ -44,7 +45,8 @@ import { Flashlight } from '@ionic-native/flashlight';
   providers: [
     StatusBar,
     SplashScreen,SMS,BarcodeScanner,Flashlight,JsonPage,MovieAppPage,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    MoviesProvider
   ]
 })
 export class AppModule {}
